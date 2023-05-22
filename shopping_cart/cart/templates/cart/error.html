@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>Error</title>
     <style>
       body {
@@ -30,15 +30,17 @@
       .back-link:hover {
         background-color: #45a049;
       }
+
+
     </style>
-  </head>
-  <body>
-    <h1>Error</h1>
-    <div class="container">
-      <p>{{ error_message }}</p>
-      <a href="{% url 'cart:shopping_cart' %}" class="back-link"
-        >Go back to Shopping Cart</a
-      >
-    </div>
-  </body>
+</head>
+<body>
+<h1>Error</h1>
+<div class="container">
+    <p>{{ error_message }}</p>
+    <a href="{% url 'cart:shopping_cart' %}" class="back-link"
+    >Go back to Shopping Cart</a
+    >
+</div>
+</body>
 </html>

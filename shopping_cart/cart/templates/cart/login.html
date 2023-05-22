@@ -1,0 +1,38 @@
+{% load static %}
+
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'cart/login.css' %}">
+
+</head>
+<body>
+{% if messages %}
+  <div class="messages-container">
+    {% for message in messages %}
+      <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+<div class="container">
+    <h1>Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required autofocus>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <div class="register-link">
+        <p>Don't have an account? <a href="{% url 'cart:register' %}" class="btn btn-link">Register</a></p>
+    </div>
+</div>
+</body>
+</html>
