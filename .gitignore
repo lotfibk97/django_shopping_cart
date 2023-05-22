@@ -1,4 +1,5 @@
 ENV/
 shopping_cart/cart/__pycache__/
+shopping_cart/shopping_cart/__pycache__/
 shopping_cart/db.sqlite3
 .idea/
